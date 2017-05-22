@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: block;
+    height: 150px;
+    background: #000;
+    align-content: center;
+    margin-top: 0px;
+    padding-top: 10px;
+}
+.gallery {
+    display: block;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+}
+
+.gallery img {
+    height: 600px;
+}
+
+.tel {
+    display: block;
+    width: 200px;
+    height: 20px;
+    margin-left: 10%;
+    margin-top: 0px;
+    color: #fff2d0;
+    font-size: 1em;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.logo {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: -5px;
+    color: #fff2d0;
+    font-size: 2.7em;
+    text-align: center;
+}
+
+.logo a {
+    display: block
+    width: 100px;
+    height: 50px;
+    text-decoration: none;
+    color: #fff2d0;
+    font-size: 1em;
+}
+
+.login {
+    display: block;
+    height: 50px;
+    width: 250px;
+    margin-left: 80%;
+    margin-top: -60px;
+    color: #fff2d0;
+    font-size: 1em;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.login a{
+    border-color: #fff2d0;
+    border-radius: 2px;
+    color: #fff2d0;
+    text-decoration: none;
+}
+
+.vxod input {
+    border: #fff2d0;
+    border-radius: 5px;
+    height: 20px;
+    margin-bottom: 5px;
+    background-color: #fff2d0;
+    padding-left: 5px;
+}
+
+.formreg {
+    display: block;
+    background: #905b20;
+    width: 400px;
+    margin: 20px;
+    margin-left: 30px;
+    color: #fff2d0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.catalog_menu {
+    align-content: none;
+    text-align: left;
+    display: inline-block;
+    background: #905b20;
+    margin: 20px;
+    margin-left: 30px;
+    color: #fff2d0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.catalog_menu li {
+    display: block;
+    float: left;
+    color: #fff2d0;
+    list-style-type: none;
+    padding: 5px;
+}
+
+.catalog_menu a {
+    text-align: left;
+    color: #fff2d0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.catalog_item img {
+    height: 100px;
+    margin-top: 10px;
+}
+
+.catalog_item {
+    float: none;
+    display: block;
+    color: #fff2d0;
+}
+
+.jewel_container {
+    display: block;
+    float: left;
+    background: #905b20;
+    margin: 20px;
+    margin-left: 30px;
+    color: #fff2d0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.formregfull {
+    display: block;
+    background: #905b20;
+    width: 600px;
+    margin: 20px;
+    margin-left: 30px;
+    color: #fff2d0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.registr input {
+    margin: 10px;
+    margin-left: 30px;
+    border: #fff2d0;
+    border-radius: 5px;
+    height: 20px;
+    margin-bottom: 5px;
+    background-color: #fff2d0;
+    padding-left: 5px;
+}
+
+.registr .submiter {
+    padding: 0px;
+    width: 150px;
+    color: #905b20;
+}
+
+.submiter {
+    color: #905b20;
+    margin-left: 5px;
+    margin-left: 30px;
+    border: #fff2d0;
+    border-radius: 5px;
+    height: 20px;
+    margin-bottom: 5px;
+    background-color: #fff2d0;
+    padding-left: 5px;
+    padding: 0px;
+
+}
+
+.submiter a {
+    text-decoration: none;
+}
+
+.menu {
+    display: inline-block;
+    margin-left: 9%;
+    margin-top: 40px;
+}
+
+.menu li{
+    text-decoration: none;
+    float: left;
+    margin-left: 20px;
+    margin-top: 15px;
+    color: #fff2d0;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    list-style-type: none;
+}
+
+.menu a{
+    text-decoration: none;
+    margin-top: 15px;
+    color: #fff2d0;
+    list-style-type: none;
+    font-size: 1.1em;
+}
+
+.admintab {
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 15px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    display: block;
+    background: #905b20;
+    width: 600px;
+    margin: 20px;
+    margin-left: 30px;
+    color: #fff2d0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.admintab li {
+    text-align: left;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.admintab a {
+    text-align: left;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.error {
+    color = red;
+}
+
+footer {
+    display: block:
+    float: none;
+    height: 150px;
+    border: red 3px;
+    background: #000;
+    align-content: center;
+    margin-top: -5px;
+}

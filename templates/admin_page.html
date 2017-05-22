@@ -1,0 +1,23 @@
+{% extends "base_admin.html" %}
+{% block js %}
+    {{ block.super }}
+    <script src="/static/js/create_user.js"></script>
+{% endblock %}
+{% block text %}
+    <div class="admintab">
+        <div>
+            <div >
+                Пользователи: <br><br>
+                <ul id="users">
+                    {% include 'inc-users_list.html' %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="formregfull">
+        <form id="user_form">
+            {% include 'inc-correction_form.html' %}
+        </form><br>
+        <input type="submit" value="Редактировать" onclick="send_data()">
+    </div>
+{% endblock %}

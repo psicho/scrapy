@@ -1,0 +1,15 @@
+{% extends "base_admin.html" %}
+{% block title %}
+{{jewels.name}}
+{% endblock %}
+{% block text %}
+<p>
+<h1>{{jewels.name}}</h1>
+</p>
+<p>
+<h2>{{jewels.category}}</h2>
+</p>
+<p>
+    {{jewels.description}}
+</p>
+{% endblock %}

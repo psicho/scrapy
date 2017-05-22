@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+{% endblock %}
+{% block text %}
+    <div class="catalog_menu">
+        {% for category in categories %}
+            <li><a href="{% url 'jeweler' category.id %}">{{category.name}}</a></li>
+        {% endfor %}
+    </div>
+    {% block tit %}
+    {% endblock %}
+    {% block jewel %}
+    {% endblock %}
+{% endblock %}
