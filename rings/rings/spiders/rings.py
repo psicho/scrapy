@@ -22,7 +22,7 @@ class RingsSpader(CrawlSpider):
     def parse_item(self, response):
         hxs = HtmlXPathSelector(response)
         l = RingsLoader(RingsItem(), hxs)
-        l.add_xpath('name', "<h1 itemprop=\"name\">(.+)<\/h1>")
+        l.add_xpath('name', "\<h1 itemprop\=\"name\"\>(.+)\<\/h1\>")
         # l.add_xpath('text', "<h1 itemprop=\"name\">(.+)<\/h1>")
 
 

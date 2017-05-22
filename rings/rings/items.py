@@ -13,7 +13,7 @@ class RingsItem(Item):
     # name = scrapy.Field()
     #id =        Field()
     name =      Field()
-    text =      Field()
+    # text =      Field()
     #image =     Field()
     #url =       Field()
     #category =  Field()
