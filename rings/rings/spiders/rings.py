@@ -31,30 +31,21 @@ class RingsSpader(scrapy.Spider):
             yield {
                 'text': brickset.css(DESCRIPTION_SELECTOR).extract(),
             }
-    # rules = (
-    # rules = (
 
-    #     Rule(SgmlLinkExtractor(allow=('catalog.+')), follow=True),
-    #     Rule(SgmlLinkExtractor(allow=('goods.+')), callback='parse_item'),
-    # )
+class ToScrapeCSSSpider(scrapy.Spider):
+    name = "rings"
+    start_urls = [
+        'https://sale.aliexpress.com/ru/mall_best.htm?spm=a2g02.8319747.j-mall-header.8.33TsbO',
+    ]
 
-    # def parse_item(self, response):
-    #     # hxs = HtmlXPathSelector(response)
-    #     # l = RingsLoader(RingsItem(), hxs)
-    #     l = RingsLoader(item=RingsItem(), response=response)
-    #     # l.add_xpath('name', "\<h1 itemprop\=\"name\"\>(.+)\<\/h1\>")
-    #     l.add_xpath('name', "<h1 itemprop=\"name\">(.+)\</h1>")
-    #     # l.add_xpath('text', "<h1 itemprop=\"name\">(.+)<\/h1>")
-    #
-    #
-    #     l.add_value('url', response.url)
-    #
-    #     return l.load_item()
+    def parse(self, response):
+        for quote in response.css("div.item-box"):
+            yield {
+                'text': quote.css("div.detail-box ::attr(title)").extract_first(),
+                'image': quote.css("div.image-box img::attr(src)").extract_first(),
+                'price': quote.css("div.price a.tag::text").extract_first()
+            }
 
-    # def parse_item(self, response):
-    #     self.logger.info('Hi, this is an item page! %s', response.url)
-    #     item = scrapy.Item()
-    #     # item['id'] = response.xpath('//td[@id="item_id"]/text()').re(r'ID: (\d+)')
-    #     item['name'] = response.xpath('<h1 [@itemprop="name"]>text(.+)\</h1>').extract()
-    #     # item['description'] = response.xpath('//td[@id="item_description"]/text()').extract()
-    #     return item
+        # next_page_url = response.css("li.next > a::attr(href)").extract_first()
+        # if next_page_url is not None:
+        #     yield scrapy.Request(response.urljoin(next_page_url))
