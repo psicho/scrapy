@@ -15,6 +15,7 @@ class IherbItem(scrapy.Item):
     description = scrapy.Field()    # Описание продукта
     image = scrapy.Field()          # Фото продукта
     firma = scrapy.Field()          # Название производителя
+    price = scrapy.Field()          # Цена товара
 
 class IherbItemLoader(ItemLoader):
     url_out = TakeFirst()
@@ -23,3 +24,4 @@ class IherbItemLoader(ItemLoader):
     description_out = TakeFirst()
     image_out = TakeFirst()
     firma_out = TakeFirst()
+    price_out = TakeFirst()
